@@ -9,10 +9,9 @@
             "hash": "e08f1c94174240ec028f2e8f937835763818cf2ba07d01b1464863e1499cb851"
         }
     },
-    "extract_dir": "mole-1.29.0-x64",
     "bin": [
-        "mo.ps1",
-        ["mo.ps1", "mole"]
+        "mole.ps1",
+        ["mole.ps1", "mole"]
     ],
     "checkver": "github",
     "autoupdate": {
