@@ -7,7 +7,7 @@
         "64bit": {
             "url": "https://github.com/tw93/Mole/releases/download/v1.29.0-windows/mole-1.29.0-x64.exe#/mole.exe",
             
-            "hash": "填入文件的SHA256哈希值"
+            "hash": "eeee6002321c6dcdf3e5c5c168fb2406b9e67c425efb5e68b3340ad56d6ee282"
         }
     },
     "bin": "mole.exe",
