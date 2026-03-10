@@ -5,18 +5,22 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tw93/Mole/releases/download/v1.29.0-windows/mole-1.29.0-x64.exe#/mole.exe",
-            
-            "hash": "eeee6002321c6dcdf3e5c5c168fb2406b9e67c425efb5e68b3340ad56d6ee282"
+            "url": "https://github.com/tw93/Mole/releases/download/v1.29.0-windows/mole-1.29.0-x64.zip",
+            "hash": "填入ZIP文件的哈希值"
         }
     },
-    "bin": "mole.exe",
+    "extract_dir": "mole-1.29.0-x64",
+    "bin": [
+        "mo.ps1",
+        ["mo.ps1", "mole"]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tw93/Mole/releases/download/v$version-windows/mole-$version-x64.exe#/mole.exe"
+                "url": "https://github.com/tw93/Mole/releases/download/v$version-windows/mole-$version-x64.zip"
             }
-        }
+        },
+        "extract_dir": "mole-$version-x64"
     }
 }
