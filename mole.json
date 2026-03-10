@@ -1,0 +1,21 @@
+{
+    "version": "1.29.0",
+    "description": "Mole for Windows - Deep clean and optimize your system.",
+    "homepage": "https://github.com/tw93/Mole",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tw93/Mole/releases/download/v1.29.0/mole-1.29.0-x64.exe#/mole.exe",
+            "hash": "填入文件的SHA256哈希值"
+        }
+    },
+    "bin": "mole.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tw93/Mole/releases/download/v$version/mole-$version-x64.exe#/mole.exe"
+            }
+        }
+    }
+}
