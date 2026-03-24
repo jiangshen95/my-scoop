@@ -1,0 +1,18 @@
+name: Excavator
+
+on:
+  workflow_dispatch:    # 允许在网页端手动点击运行（方便测试）
+  schedule:
+    - cron: '20 */4 * * *'  # 设定定时任务：每 4 小时的第 20 分钟自动运行一次
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Excavator
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'
