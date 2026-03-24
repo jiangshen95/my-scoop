@@ -13,7 +13,10 @@
         "mole.ps1",
         ["mole.ps1", "mole"]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/tw93/Mole",
+        "regex": "v([\\d.]+)-windows"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
