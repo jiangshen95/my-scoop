@@ -14,7 +14,8 @@
         ["mole.ps1", "mole"]
     ],
     "checkver": {
-        "github": "https://github.com/tw93/Mole",
+        "url": "https://api.github.com/repos/tw93/Mole/releases",
+        "jsonpath": "$..tag_name",
         "regex": "v([\\d.]+)-windows"
     },
     "autoupdate": {
