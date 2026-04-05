@@ -1,9 +1,9 @@
 name: Excavator
 
 on:
-  workflow_dispatch:    # 允许在网页端手动点击运行（方便测试）
+  workflow_dispatch:
   schedule:
-    - cron: '20 */4 * * *'  # 设定定时任务：每 4 小时的第 20 分钟自动运行一次
+    - cron: '20 */4 * * *'
 
 jobs:
   excavate:
@@ -11,8 +11,12 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: write
+    # 添加系统级环境变量，强制所有 action 使用 Node.js 24 运行以消除警告
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - uses: actions/checkout@v4
+      # 升级到 v6 版本，原生支持 Node.js 24
+      - uses: actions/checkout@v6
       - name: Excavator
         uses: ScoopInstaller/GithubActions@main
         env:
