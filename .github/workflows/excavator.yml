@@ -17,7 +17,15 @@ jobs:
     steps:
       # 升级到 v6 版本，原生支持 Node.js 24
       - uses: actions/checkout@v6
-      - name: Excavator
+      - name: Excavator (attempt 1)
+        id: excavator_attempt_1
+        uses: ScoopInstaller/GithubActions@main
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: '1'
+      - name: Excavator (retry)
+        if: steps.excavator_attempt_1.outcome == 'failure'
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
