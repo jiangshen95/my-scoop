@@ -18,7 +18,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/tw93/Mole",
+        "github": "https://github.com/tw93/Mole/releases",
         "regex": "v([\\d.]+)-windows"
     },
     "autoupdate": {
