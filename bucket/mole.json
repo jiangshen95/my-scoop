@@ -9,7 +9,6 @@
             "hash": "3cc783bc81c70dafb04a48573943ca6ce15bf5f8ace4b5d840671ba5e5e3f8aa"
         }
     },
-    "extract_dir": "mole-1.30.0-x64",
     "bin": [
         "mole.ps1",
         [
@@ -26,7 +25,6 @@
             "64bit": {
                 "url": "https://github.com/tw93/Mole/releases/download/v$version-windows/mole-$version-x64.zip"
             }
-        },
-        "extract_dir": "mole-$version-x64"
+        }
     }
 }
