@@ -1,5 +1,5 @@
 {
-    "version": "nightly",
+    "version": "c53ca64c33d1658602b9a3aaa412eca9c6544294",
     "description": "GPU-accelerated terminal emulator (nightly builds)",
     "homepage": "https://github.com/wez/wezterm",
     "license": "Apache-2.0",
@@ -42,5 +42,20 @@
     ],
     "uninstaller": {
         "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" *> $null }"
+    },
+    "checkver": {
+        "url": "https://github.com/wez/wezterm/releases/tag/nightly",
+        "script": [
+            "$m = [regex]::Match($page, 'commit/([0-9a-f]{40})')",
+            "if (-not $m.Success) { throw 'Could not find the build commit on the wezterm nightly release page' }",
+            "$m.Groups[1].Value"
+        ]
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
+            }
+        }
     }
 }
