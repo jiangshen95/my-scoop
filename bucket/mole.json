@@ -1,12 +1,12 @@
 {
-    "version": "1.30.0",
+    "version": "1.32.0",
     "description": "Mole for Windows - Deep clean and optimize your system.",
     "homepage": "https://github.com/tw93/Mole",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tw93/Mole/releases/download/v1.30.0-windows/mole-1.30.0-x64.zip",
-            "hash": "3cc783bc81c70dafb04a48573943ca6ce15bf5f8ace4b5d840671ba5e5e3f8aa"
+            "url": "https://github.com/tw93/Mole/releases/download/V1.32.0-windows/mole-1.32.0-x64.zip",
+            "hash": "81daaee1eb71f085565ee48e0ca8641d5e34bb86773fba793d0dd3f7285deda8"
         }
     },
     "bin": [
@@ -18,12 +18,12 @@
     ],
     "checkver": {
         "url": "https://github.com/tw93/Mole/releases",
-        "regex": "/releases/tag/v([\\d.]+)-windows"
+        "regex": "/releases/tag/[vV]([\\d.]+)-windows"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tw93/Mole/releases/download/v$version-windows/mole-$version-x64.zip"
+                "url": "https://github.com/tw93/Mole/releases/download/V$version-windows/mole-$version-x64.zip"
             }
         }
     }
